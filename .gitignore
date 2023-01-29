@@ -36,20 +36,5 @@ sysinfo.txt
 *.unitypackage
 Assets/NonVersionControlled/
 Assets/NonVersionControl/
-Assets/Scripts/CoreLibrary.dll
-CoreLibraryTests/bin/Debug/CoreLibrary.dll
-CoreLibraryTests/bin/Debug/CoreLibraryTests.dll
-_NCrunch_Fantasy Game/Fantasy Game.executiontimes.cache
-_NCrunch_Fantasy Game/Fantasy Game.crunchsolution.cache
-Assets/Scripts/CoreLibrary.dll.mdb
-_NCrunch_Fantasy Game/Fantasy Game.crunchsolution.cache
-_NCrunch_Fantasy Game/Fantasy Game.executiontimes.cache
-Assets/Scripts/CoreLibrary.dll
-Assets/Scripts/CoreLibrary.dll.mdb
-CoreLibraryTests/bin/Debug/CoreLibrary.dll
-CoreLibraryTests/bin/Debug/CoreLibraryTests.dll
-CoreLibrary/CoreLibrary.dll.mdb
-CoreLibrary/bin/Debug/CoreLibrary.dll
-CoreLibrary/bin/Debug/CoreLibrary.dll.mdb
-CoreLibrary/bin/Debug/UnityEngine.xml
-CoreLibraryTests/bin/Debug/UnityEngine.xml
+Logs/*
+
