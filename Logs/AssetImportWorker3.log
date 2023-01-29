@@ -1,0 +1,397 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.17f1 (3e8111cac19d) revision 4096273'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 32671 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/RyzenBox/Documents/GitHub/Roots
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+59826
+Successfully changed project path to: C:/Users/RyzenBox/Documents/GitHub/Roots
+C:/Users/RyzenBox/Documents/GitHub/Roots
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15732] Host "[IP] 192.168.254.195 [Port] 0 [Flags] 2 [Guid] 3354135373 [EditorId] 3354135373 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-C16A4CE) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [15732] Host "[IP] 192.168.254.195 [Port] 0 [Flags] 2 [Guid] 3354135373 [EditorId] 3354135373 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-C16A4CE) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 73.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.17f1 (3e8111cac19d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/RyzenBox/Documents/GitHub/Roots/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6800 XT (ID=0x73bf)
+    Vendor:   ATI
+    VRAM:     16338 MB
+    Driver:   31.0.12029.10015
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56848
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005523 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 65.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.470 seconds
+Domain Reload Profiling:
+	ReloadAssembly (470ms)
+		BeginReloadAssembly (57ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (333ms)
+			LoadAssemblies (55ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (67ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (210ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (66ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (104ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005106 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\RyzenBox\Documents\GitHub\Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\RyzenBox\Documents\GitHub\Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.746 seconds
+Domain Reload Profiling:
+	ReloadAssembly (747ms)
+		BeginReloadAssembly (102ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (14ms)
+		EndReloadAssembly (561ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (174ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (269ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (171ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3377 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (113.5 KB). Loaded Objects now: 3834.
+Memory consumption went from 115.6 MB to 115.5 MB.
+Total: 2.324700 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.088200 ms MarkObjects: 2.026000 ms  DeleteObjects: 0.061500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004667 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\RyzenBox\Documents\GitHub\Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\RyzenBox\Documents\GitHub\Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.781 seconds
+Domain Reload Profiling:
+	ReloadAssembly (781ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (595ms)
+			LoadAssemblies (63ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (195ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (273ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (58ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (79.7 KB). Loaded Objects now: 3837.
+Memory consumption went from 115.6 MB to 115.5 MB.
+Total: 2.151300 ms (FindLiveObjects: 0.146000 ms CreateObjectMapping: 0.078800 ms MarkObjects: 1.889200 ms  DeleteObjects: 0.036800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 93721.965021 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5.terrainlayer
+  artifactKey: Guid(0a9fdb633e4028d448d3e20b624c4ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5.terrainlayer using Guid(0a9fdb633e4028d448d3e20b624c4ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0903a2445b189907e21cb341f420e5ce') in 0.089610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Mask.png
+  artifactKey: Guid(47ea9a9030faf9b4caffe6266b8e46ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Mask.png using Guid(47ea9a9030faf9b4caffe6266b8e46ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45d5f13ba93014372f1162b45b2fc22') in 0.042513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Normal.png
+  artifactKey: Guid(6daf6697bb2230e49b0d0795936dc2b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Normal.png using Guid(6daf6697bb2230e49b0d0795936dc2b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbf4292b0796fb26ed0c8bc0ffc4db7') in 0.023289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Roughness.png
+  artifactKey: Guid(d2011156d4ae2c1458fb35f0715bd0c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Roughness.png using Guid(d2011156d4ae2c1458fb35f0715bd0c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d90d73c45f6b33f4447fc9f8c29b657') in 0.008602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Metallic.png
+  artifactKey: Guid(f744d3d9d1298924a8e87435e7d1fae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Metallic.png using Guid(f744d3d9d1298924a8e87435e7d1fae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3982ddfb668cdf80bbac96c568b32d84') in 0.008386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Albedo.png
+  artifactKey: Guid(ee73c4fd372c3c0418bf6bc20dac4e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Albedo.png using Guid(ee73c4fd372c3c0418bf6bc20dac4e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd5c85c2844dca6b68f2eb6a629ef359') in 0.008209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_AO.png
+  artifactKey: Guid(328ff2c96625f30459c18f69b3d0e01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_AO.png using Guid(328ff2c96625f30459c18f69b3d0e01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75b28d43a781c18ea0d93ffa3ceb11f9') in 0.010258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Height.png
+  artifactKey: Guid(1ed926a0afbd4674794317847ae61d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Height.png using Guid(1ed926a0afbd4674794317847ae61d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a96d57cc5e8d2b3bb46bf8a56c7f8bd8') in 0.008908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.256202 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Albedo.png
+  artifactKey: Guid(592b3c13ca2a2ab46b678402d9f85ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Albedo.png using Guid(592b3c13ca2a2ab46b678402d9f85ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '897508a88a5eb1866b5640e132f5f7e8') in 0.010393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Roughness.png
+  artifactKey: Guid(7b0c9a0fbfdbc7446bf0e579bf754c9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Roughness.png using Guid(7b0c9a0fbfdbc7446bf0e579bf754c9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fea9adf1fbd4ad2142c586d955d8143') in 0.008297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Height.png
+  artifactKey: Guid(96478242ecf35a446be7d176731fdf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Height.png using Guid(96478242ecf35a446be7d176731fdf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60dff9c9f28417d0936d326fda1db588') in 0.008118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Metallic.png
+  artifactKey: Guid(928131ae3931fe341a0fddd145d72ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Metallic.png using Guid(928131ae3931fe341a0fddd145d72ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '628bdd7d7d9246915a855d0f1902101f') in 0.008415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Mask.png
+  artifactKey: Guid(b8cb36d976948ee4db8964941cf5a204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Mask.png using Guid(b8cb36d976948ee4db8964941cf5a204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd4f532472e5ee5f76065d79feb30249') in 0.009081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.682433 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Albedo.png
+  artifactKey: Guid(4f2e0ed1f5043764dbf27de75379064e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Albedo.png using Guid(4f2e0ed1f5043764dbf27de75379064e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400bd5eb727d5d21707f48a597c7c0a0') in 0.009411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Metallic.png
+  artifactKey: Guid(b4675ab39ddb3a84d80368292d9cdfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Metallic.png using Guid(b4675ab39ddb3a84d80368292d9cdfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06167df805e7eebecae4d0229cb7a8d') in 0.010432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Height.png
+  artifactKey: Guid(8f76e0d48ea2449499203ed05126c39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Height.png using Guid(8f76e0d48ea2449499203ed05126c39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfb7b7388722d66df324d0763fade28') in 0.008014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.441961 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Albedo.png
+  artifactKey: Guid(9f968274cc10f6d44831e754241a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Albedo.png using Guid(9f968274cc10f6d44831e754241a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8376fd0496d5cf3a989e40d1f9a60c4d') in 0.009739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Normal.png
+  artifactKey: Guid(ad19895c93da4f947b3e9486db4b669b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Normal.png using Guid(ad19895c93da4f947b3e9486db4b669b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f259884b2317f74bf76cc5dac6be6bd5') in 0.009903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Mask.png
+  artifactKey: Guid(9d22d2166223e6f40b8dc6ba7d75f847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Mask.png using Guid(9d22d2166223e6f40b8dc6ba7d75f847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af58e0612946c20ce37321ff43eee2b0') in 0.008802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.436822 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Albedo.png
+  artifactKey: Guid(f2eb98b7981431147aa2a701905b0a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Albedo.png using Guid(f2eb98b7981431147aa2a701905b0a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f18a243b26fc87b9b7787c597a2027f') in 0.010026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Height.png
+  artifactKey: Guid(1e5e53a3c445ec74e9b0f3e0e279a1a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Height.png using Guid(1e5e53a3c445ec74e9b0f3e0e279a1a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8237163b731da09a0c83bfb2bf2c17c2') in 0.008670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Roughness.png
+  artifactKey: Guid(eaf565b9ee5c42746a60de2b0d101941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Roughness.png using Guid(eaf565b9ee5c42746a60de2b0d101941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4592ee7586ac963d1a1d44f8568998c5') in 0.009955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 592.098911 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1.mat
+  artifactKey: Guid(99cc3500a09005e4c87b5cd6882fd351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1.mat using Guid(99cc3500a09005e4c87b5cd6882fd351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf36bcb64f9fa459ea4d72b663ce7769') in 1.288056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 129.720158 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1.mat
+  artifactKey: Guid(d93068d3f9515d144b46ddd08b1149d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1.mat using Guid(d93068d3f9515d144b46ddd08b1149d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcac8040d646e5788634b78ec9ab424a') in 0.026650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Height.png
+  artifactKey: Guid(6dbdfbde4a528374c8754a1c7388a859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Height.png using Guid(6dbdfbde4a528374c8754a1c7388a859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5559f4f66d1cbea901313d7c50a081a8') in 0.010365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_AO.png
+  artifactKey: Guid(30f5dace06157dd46aba2eaca13c8ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_AO.png using Guid(30f5dace06157dd46aba2eaca13c8ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fdc4dac3eb76bdf4ae451b12b13fc1b') in 0.007568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Mask.png
+  artifactKey: Guid(95d05ed1f66dfd840bceb035884c2492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Mask.png using Guid(95d05ed1f66dfd840bceb035884c2492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615c1c4c14871649089e8976ab4afdf3') in 0.009728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Albedo.png
+  artifactKey: Guid(aec81be1466b86948bd735f2ddd76a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Albedo.png using Guid(aec81be1466b86948bd735f2ddd76a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe27207cd03ada276e78062b97b01665') in 0.006771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Roughness.png
+  artifactKey: Guid(d28cb0cda7c7f084f984b9058c88a6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game Buffs/Free Stylized Textures/Textures/Test Root/Wood_Wall_1_Roughness.png using Guid(d28cb0cda7c7f084f984b9058c88a6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7839fd7439b4fa8797776d3f8e54dd3c') in 0.008380 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

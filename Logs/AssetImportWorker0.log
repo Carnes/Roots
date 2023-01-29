@@ -241,3 +241,111 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1832.276426 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(c5feb91749291cb408a1971348819273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(c5feb91749291cb408a1971348819273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767fbac5266aa7012e68b32868c0d7a0') in 0.009402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 354.798186 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free
+  artifactKey: Guid(a33d5d057ded0cf4f968e8c0ed865210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free using Guid(a33d5d057ded0cf4f968e8c0ed865210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '885596696ce6ec74b54ebeb5629a1a14') in 0.005531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.624699 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free/Textures
+  artifactKey: Guid(2700f51cf8c6e394090946fdd4cbc9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free/Textures using Guid(2700f51cf8c6e394090946fdd4cbc9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927d725282b14aac0e7c858ae3f6c4c0') in 0.004705 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.592921 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free/Materials
+  artifactKey: Guid(718644970dafadb4fa41d421dd431878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free/Materials using Guid(718644970dafadb4fa41d421dd431878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3704f6ada97777955fa2562a449c6377') in 0.001549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.132942 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Grass.mat
+  artifactKey: Guid(a184a269b9840f34298c1ef45dbd457a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Grass.mat using Guid(a184a269b9840f34298c1ef45dbd457a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35823c2fef0741ed1d8f5ad9768d2d35') in 0.113039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Groundd_Stylize.mat
+  artifactKey: Guid(fcbc4e9d3a07b5141834cf89887de452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Groundd_Stylize.mat using Guid(fcbc4e9d3a07b5141834cf89887de452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6580ac382bfe55fc6ce487997270c2d8') in 0.031028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Stylized_Bark.mat
+  artifactKey: Guid(eb9f7835b2333cc41a8bfd9dee227892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Stylized_Bark.mat using Guid(eb9f7835b2333cc41a8bfd9dee227892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8385ad2f0f5fefeec32273246ca8093') in 0.014277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Sand_WStone.mat
+  artifactKey: Guid(294eaaa4ff236444e8b9bca514a2e911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Erbeillo Stylize Material Demo Free/Materials/Sand_WStone.mat using Guid(294eaaa4ff236444e8b9bca514a2e911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '077cfbfc5beac1368395891bc8656f48') in 0.013401 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005021 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\RyzenBox\Documents\GitHub\Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\RyzenBox\Documents\GitHub\Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.797 seconds
+Domain Reload Profiling:
+	ReloadAssembly (798ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (614ms)
+			LoadAssemblies (64ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (200ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (289ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (188ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (79.8 KB). Loaded Objects now: 3881.
+Memory consumption went from 120.2 MB to 120.2 MB.
+Total: 2.508700 ms (FindLiveObjects: 0.168300 ms CreateObjectMapping: 0.084000 ms MarkObjects: 2.215200 ms  DeleteObjects: 0.040500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
