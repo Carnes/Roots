@@ -31,10 +31,7 @@ public class NutrientSpawner : MonoBehaviour
         foreach (Vector3 spawnPoint in nutrientSpawnPoints)
         {
             float distance = Vector3.Distance(randomPosition, spawnPoint);
-            if (distance < distanceThreshold)
-            {
-                return true;
-            }
+            if (distance < distanceThreshold) return true;
         }
         return false;
     }
