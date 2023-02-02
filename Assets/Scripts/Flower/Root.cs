@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Helpers;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Roots
+namespace Flower
 {
     [RequireComponent(typeof(LineRenderer))]
     public class Root : MonoBehaviour
@@ -14,10 +13,9 @@ namespace Roots
         public float RootWidthMax = 1.5f;
         public float RootWidthPerSegment = 0.25f;
         public List<Vector3> Points;
-        public Vector3 GrowDirectionMin;
-        public Vector3 GrowDirectionMax;
-        public Vector3 BoundaryMin;
-        public Vector3 BoundaryMax;
+
+        public Root ParentRoot;
+        public List<Root> ChildrenRoots;
         
         private LineRenderer _lineRenderer;
 
@@ -40,9 +38,30 @@ namespace Roots
             SetRootWidth();
         }
 
+        // public int GetCountOfRootPartsFromFlower(int currentCount = 0)
+        // {
+        //     currentCount++;
+        //     if (ParentRoot == null)
+        //         return currentCount;
+        //     return ParentRoot.GetCountOfRootPartsFromFlower(currentCount);
+        // }
+
+        public int GetCountOfRootPartsFromChildren()
+        {
+            var currentCount = Points.Count;
+            foreach (var child in ChildrenRoots)
+            {
+                currentCount += child.GetCountOfRootPartsFromChildren();
+            }
+
+            return currentCount;
+        }
+        
+
         public void SetRootWidth()
         {
-            var rootWidth = RootWidthPerSegment * Points.Count;
+            var childParts = GetCountOfRootPartsFromChildren();
+            var rootWidth = RootWidthPerSegment * (childParts);
             if (rootWidth > RootWidthMax)
                 rootWidth = RootWidthMax;
             if (rootWidth < RootWidthMin)
@@ -56,12 +75,6 @@ namespace Roots
             _lineRenderer.positionCount = Points.Count;
             _lineRenderer.SetPosition(Points.Count-1, point);
             SetRootPoints();
-        }
-
-        public void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-            GizmoHelper.DrawRectangle(BoundaryMin, BoundaryMax, transform.position);
         }
 
         [ContextMenu("Grow Down")]
