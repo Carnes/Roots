@@ -34,6 +34,9 @@ namespace DefaultNamespace
             MoveCamera(FlowerCam, DirtCam);
             yield return new WaitForSeconds(DelayFromDirtToUnderground);
             MoveCamera(DirtCam, UndergroundCam);
+            
+            yield return new WaitForSeconds(3);
+            Application.Quit();
         }
 
         private void MoveCamera(CinemachineVirtualCamera currentCam, CinemachineVirtualCamera newCam)
