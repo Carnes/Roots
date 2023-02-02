@@ -69,6 +69,12 @@ namespace Flower
             _lineRenderer.startWidth = rootWidth;
         }
 
+        public void AddRootWorldPoint(Vector3 worldPoint)
+        {
+            var localPoint = transform.InverseTransformPoint(worldPoint);
+                AddRootPoint(localPoint);
+        }
+
         public void AddRootPoint(Vector3 point)
         {
             Points.Add(point);

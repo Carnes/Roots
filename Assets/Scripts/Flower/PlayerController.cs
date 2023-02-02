@@ -40,17 +40,8 @@ namespace Flower
 
             if (Physics.Raycast(mouseRay, out _mouseClickHit, 1000f, GameSettings.Instance.SelectableColliderLayer, QueryTriggerInteraction.Collide))
             {
-                Debug.Log($"Grow to point: {_mouseClickHit.point.ToString()}");
-                // var mob = _mouseClickHit.collider.GetComponentInParent<MobController>();
-                // if (!(mob is null))
-                // {
-                //     ClearAllActions();
-                //     if (IsFriendlyMob(mob))
-                //         QueueAction_MoveToMob(mob, MoveToMobReason.Friendly, 1f); // FIXME - magic number, stopping dist
-                //     else
-                //         QueueAction_AttackMob(mob);
-                //     return;
-                // }
+                // Debug.Log($"Grow to point: {_mouseClickHit.point.ToString()}");
+                MainRoot.AddRootWorldPoint(_mouseClickHit.point);
             }
         }
     }
