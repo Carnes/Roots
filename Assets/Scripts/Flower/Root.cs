@@ -13,6 +13,7 @@ namespace Flower
         public float RootWidthMax = 1.5f;
         public float RootWidthPerSegment = 0.25f;
         public List<Vector3> Points;
+        public GameObject RootPartGameObject;
 
         public Root ParentRoot;
         public List<Root> ChildrenRoots;
@@ -77,9 +78,19 @@ namespace Flower
 
         public void AddRootPoint(Vector3 point)
         {
+            var lastPoint = Points.LastOrDefault();
+            if (lastPoint != null)
+            {
+                var rootPartGameObject = Instantiate(RootPartGameObject, transform);
+                var rootPart = rootPartGameObject.GetComponent<RootPart>();
+                rootPart.Set(lastPoint, point);
+                rootPartGameObject.SetActive(true);
+            }
+
             Points.Add(point);
             _lineRenderer.positionCount = Points.Count;
             _lineRenderer.SetPosition(Points.Count-1, point);
+            
             SetRootPoints();
         }
 

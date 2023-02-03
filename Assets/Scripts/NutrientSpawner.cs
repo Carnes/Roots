@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -12,6 +13,8 @@ public class NutrientSpawner : MonoBehaviour
     public Vector3 minBounds = new Vector3(-11f, -28f);
     public Vector3 maxBounds = new Vector3(6f, -4f);
     public float z = 81f;
+    public float NutrientValueMin = 2;
+    public float NutrientValueMax = 4;
     private GameObject[] _existingNutrients = Array.Empty<GameObject>();
 
     void DestroyNutrientsIfExists()
@@ -51,7 +54,9 @@ public class NutrientSpawner : MonoBehaviour
             if (!IsTooClose(nutrientSpawnPoints, randomPosition))
             {
                 nutrientSpawnPoints.Add(randomPosition);
-                Instantiate(nutrient, randomPosition, Quaternion.identity);
+                var newNutrientGameObject = Instantiate(nutrient, randomPosition, Quaternion.identity);
+                var newNutrient = newNutrientGameObject.GetComponent<Nutrient>();
+                newNutrient.Value = Random.Range(NutrientValueMin, NutrientValueMax);
             }
             else i--;
         }
