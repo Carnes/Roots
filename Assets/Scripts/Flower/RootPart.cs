@@ -7,8 +7,13 @@ namespace Flower
     [RequireComponent(typeof(Rigidbody))]
     public class RootPart : MonoBehaviour
     {
+        public Vector3 Start;
+        public Vector3 End;
+        
         public void Set(Vector3 start, Vector3 end)
         {
+            Start = start;
+            End = end;
             var direction = (end - start).normalized;
             var dist = Vector3.Distance(start, end);
             var middlePoint = ((dist / 2) * direction) + start;
@@ -29,6 +34,11 @@ namespace Flower
                 var nutrient = other.gameObject.GetComponent<Nutrient>();
                 Debug.Log($"Found Nutrient! value: {nutrient.Value}");
                 Destroy(other.gameObject);
+            }
+            else if (other.gameObject.CompareTag("Spider"))
+            {
+                Debug.Log($"Spider strike!");
+                transform.parent.GetComponent<Root>().RootPartHit(this);
             }
             else
             {
