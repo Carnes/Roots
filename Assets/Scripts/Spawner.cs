@@ -59,6 +59,7 @@ public class Spawner : MonoBehaviour
 
                 if (objectTypeToSpawn == "Obstacle")
                 {
+                    var newObstacle = gameObjectToSpawn.GetComponent<Obstacle>();
                     gameObjectToSpawn.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
                     gameObjectToSpawn.transform.localScale = new Vector3(Random.Range(1f, 4f), Random.Range(1f, 4f), 1);
                 }
