@@ -4,7 +4,7 @@ namespace Flower
 {
     public class RootNutrientReserve : Helpers.Singleton<RootNutrientReserve>
     {
-        public float NutrientsInReserve { get; private set; } = 10;
+        public float NutrientsInReserve = 10;
         
 
         [ContextMenu("Add Nutrients")]
