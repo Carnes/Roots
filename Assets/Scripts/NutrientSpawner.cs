@@ -6,6 +6,12 @@ public class NutrientSpawner : MonoBehaviour
     public int totalNutrientsToSpawn = 15;
     private Spawner _spawner;
 
+    public void SpawnNutrientsButton()
+    {
+        _spawner.DestroyObjectsIfExists();
+        _spawner.RandomlySpawnObjects(nutrient, totalNutrientsToSpawn, "Nutrient");
+    }
+
     // Start is called before the first frame update
     void Start()
     {

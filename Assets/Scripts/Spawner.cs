@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     public float z = 81f;
     private GameObject[] _existingObjects = Array.Empty<GameObject>();
 
-    void DestroyObjectsIfExists()
+    public void DestroyObjectsIfExists()
     {
         if (_existingObjects.Length > 0)
         {
@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
     }
     private bool IsTooClose(List<Vector3> objectSpawnPoints, Vector3 randomPosition)
     {
-        float distanceThreshold = 5f;
+        float distanceThreshold = 8f;
         foreach (Vector3 spawnPoint in objectSpawnPoints)
         {
             float distance = Vector3.Distance(randomPosition, spawnPoint);
@@ -35,8 +35,6 @@ public class Spawner : MonoBehaviour
     
     public void RandomlySpawnObjects(GameObject objectToSpawn, int numObjectsToSpawn, string objectTypeToSpawn)
     {
-        DestroyObjectsIfExists();
-
         List<Vector3> spawnPoints = new List<Vector3>();
         for (int i = 0; i < numObjectsToSpawn; i++)
         {
@@ -53,10 +51,16 @@ public class Spawner : MonoBehaviour
                 if (objectTypeToSpawn == "Nutrient")
                 {
                     var newNutrient = gameObjectToSpawn.GetComponent<Nutrient>();
-                    newNutrient.Value = Random.Range(1,4);
+                    newNutrient.Value = Random.Range(1f,6f);
 
-                    float scalingFactor = newNutrient.Value / 2;
+                    float scalingFactor = newNutrient.Value / 3;
                     gameObjectToSpawn.transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
+                }
+
+                if (objectTypeToSpawn == "Obstacle")
+                {
+                    gameObjectToSpawn.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
+                    gameObjectToSpawn.transform.localScale = new Vector3(Random.Range(1f, 4f), Random.Range(1f, 4f), 1);
                 }
             }
             else i--;

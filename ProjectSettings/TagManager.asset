@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Nutrient
   - Spider
+  - Obstacle
   layers:
   - Default
   - TransparentFX
