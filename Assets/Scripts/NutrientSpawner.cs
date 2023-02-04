@@ -10,8 +10,8 @@ public class NutrientSpawner : MonoBehaviour
 {
     public GameObject nutrient;
     public int totalNutrientsToSpawn = 10;
-    public Vector3 minBounds = new Vector3(-11f, -28f);
-    public Vector3 maxBounds = new Vector3(6f, -4f);
+    public Vector3 minBounds = new Vector3(-25f, -28f);
+    public Vector3 maxBounds = new Vector3(21f, -4f);
     public float z = 81f;
     public float NutrientValueMin = 1;
     public float NutrientValueMax = 4;

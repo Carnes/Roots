@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Prefabs.PowerUp.Scripts.Utility;
 
 public class PowerUpManager : Singleton<PowerUpManager>
 {
