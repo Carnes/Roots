@@ -29,6 +29,8 @@ namespace Flower
         private List<Root> ChildrenRoots = new List<Root>();
         private LineRenderer _lineRenderer;
 
+        public Vector3 GrowPosition => AllPoints.Last() + transform.position; // very end of root
+
         private List<Vector3> AllPoints => StartingStaticPoints.Union(RootParts.Select(rp=>rp.End).ToList()).ToList();
 
         public void OnEnable()
@@ -71,7 +73,7 @@ namespace Flower
             // return parts;
         }
 
-        private void AddRootWorldPoint(Vector3 worldPoint)
+        public void GrowToWorldPoint(Vector3 worldPoint)
         {
             var localPoint = transform.InverseTransformPoint(worldPoint);
             var localPointNormalized = new Vector3(localPoint.x, localPoint.y, 0f);
@@ -124,7 +126,6 @@ namespace Flower
         private void RefreshLineRenderer()
         {
             var allPoints = AllPoints;
-            // var offSet = transform.position;
             _lineRenderer.positionCount = allPoints.Count;
             _lineRenderer.SetPositions(allPoints.ToArray());
             SetRootWidth();
@@ -145,13 +146,6 @@ namespace Flower
             var rootDeath = Instantiate(RootDeathGameObject, rootPart.gameObject.transform.position, Quaternion.identity);
             rootDeath.SetActive(true);
             Destroy(rootPart.gameObject, 0.01f); // FIXME - magic number
-        }
-
-        public Vector3 GrowPosition => AllPoints.Last() + transform.position; // very end of root
-        
-        public void GrowToWorldPoint(Vector3 worldPoint)
-        {
-            AddRootWorldPoint(worldPoint); // FIXME, should these funcs be merged?
         }
     }
 }
