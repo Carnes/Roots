@@ -11,6 +11,8 @@ namespace Flower
         public Vector3 Start;
         public Vector3 End;
 
+        private Root Root => transform.parent.GetComponent<Root>();
+
         public void Set(Vector3 start, Vector3 end)
         {
             Start = start;
@@ -45,7 +47,7 @@ namespace Flower
             {
                 var shouldDestroyRoots = collisionHandler.HandleRootPartCollision(this, other);
                 if (shouldDestroyRoots)
-                    transform.parent.GetComponent<Root>().RootPartHit(this);
+                    Root.RootPartHit(this);
             }
         }
     }

@@ -34,7 +34,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _InvFade: 1.1067857
+    - _InvFade: 3
     - _Parallax: 0.02
     - _Shininess: 0.078125
     m_Colors:
