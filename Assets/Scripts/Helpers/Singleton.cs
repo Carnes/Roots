@@ -1,73 +1,77 @@
 ﻿using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+namespace Helpers
 {
-    private static bool m_ShuttingDown = false;
-    private static object m_Lock = new object();
-    private static T m_Instance;
-    private static bool hasWoke = false;
-
-    public void Awake()
+    public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        if(hasWoke == false)
-            SingletonAwake();
-        hasWoke = true;
-    }
+        private static bool m_ShuttingDown = false;
+        private static object m_Lock = new object();
+        private static T m_Instance;
+        private static bool hasWoke = false;
 
-    public void Start()
-    {
-        SingletonStart();
-    }
-
-    public virtual void SingletonStart()
-    { 
-    }
-
-    public virtual void SingletonAwake()
-    {
-    }
-
-    public static T Instance
-    {
-        get
+        public void Awake()
         {
-            if (m_ShuttingDown)
-            {
-                Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
-                    "' already destroyed. Returning null.");
-                return null;
-            }
-            if (!hasWoke)
-                return null;
+            if (hasWoke == false)
+                SingletonAwake();
+            hasWoke = true;
+        }
 
-            lock (m_Lock)
+        public void Start()
+        {
+            SingletonStart();
+        }
+
+        public virtual void SingletonStart()
+        {
+        }
+
+        public virtual void SingletonAwake()
+        {
+        }
+
+        public static T Instance
+        {
+            get
             {
-                if (m_Instance == null)
+                if (m_ShuttingDown)
                 {
-                    m_Instance = (T)FindObjectOfType(typeof(T));
-
-                    if (m_Instance == null)
-                    {
-                        var singletonObject = new GameObject();
-                        m_Instance = singletonObject.AddComponent<T>();
-                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
-
-                        DontDestroyOnLoad(singletonObject);
-                    }
+                    Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
+                                     "' already destroyed. Returning null.");
+                    return null;
                 }
 
-                return m_Instance;
+                if (!hasWoke)
+                    return null;
+
+                lock (m_Lock)
+                {
+                    if (m_Instance == null)
+                    {
+                        m_Instance = (T)FindObjectOfType(typeof(T));
+
+                        if (m_Instance == null)
+                        {
+                            var singletonObject = new GameObject();
+                            m_Instance = singletonObject.AddComponent<T>();
+                            singletonObject.name = typeof(T).ToString() + " (Singleton)";
+
+                            DontDestroyOnLoad(singletonObject);
+                        }
+                    }
+
+                    return m_Instance;
+                }
             }
         }
-    }
 
-    private void OnApplicationQuit()
-    {
-        m_ShuttingDown = true;
-    }
+        private void OnApplicationQuit()
+        {
+            m_ShuttingDown = true;
+        }
 
-    private void OnDestroy()
-    {
-        m_ShuttingDown = true;
+        private void OnDestroy()
+        {
+            m_ShuttingDown = true;
+        }
     }
 }

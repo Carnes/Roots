@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Roots
 {
-    public class GameSettings : Singleton<GameSettings>
+    public class GameSettings : Helpers.Singleton<GameSettings>
     {
         public Vector3 BoundaryMin;
         public Vector3 BoundaryMax;
