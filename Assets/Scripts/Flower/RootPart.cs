@@ -9,6 +9,7 @@ namespace Flower
     {
         public Vector3 Start;
         public Vector3 End;
+        public RootNutrientReserve currentNutrients;
         
         public void Set(Vector3 start, Vector3 end)
         {
@@ -25,6 +26,8 @@ namespace Flower
             var collider = GetComponent<CapsuleCollider>();
             collider.height = dist;
             collider.isTrigger = true;
+            
+            currentNutrients = RootNutrientReserve.Instance;
         }
 
         protected void OnTriggerEnter(Collider other)
@@ -32,7 +35,8 @@ namespace Flower
             if (other.gameObject.CompareTag("Nutrient"))
             {
                 var nutrient = other.gameObject.GetComponent<Nutrient>();
-                Debug.Log($"Found Nutrient! value: {nutrient.Value}");
+                currentNutrients.AddNutrient(nutrient.Value);
+                Debug.Log($"Found Nutrient! value: {nutrient.Value}. Nutrient Reserve is {currentNutrients.NutrientReserve}");
                 Destroy(other.gameObject);
             }
             else if (other.gameObject.CompareTag("Spider"))

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028466, g: 0.22571646, b: 0.30692235, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028489, g: 0.225717, b: 0.30692303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -692,7 +692,7 @@ MonoBehaviour:
   minBounds: {x: -11, y: -28, z: 0}
   maxBounds: {x: 6, y: -4, z: 0}
   z: 81
-  NutrientValueMin: 2
+  NutrientValueMin: 1
   NutrientValueMax: 4
 --- !u!1 &552480822
 GameObject:
@@ -1163,6 +1163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796639140}
   - component: {fileID: 796639141}
+  - component: {fileID: 796639143}
   - component: {fileID: 796639142}
   m_Layer: 0
   m_Name: Roots
@@ -1315,6 +1316,18 @@ LineRenderer:
     generateLightingData: 1
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &796639143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796639139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba58c8dc457d9d48a2a59f713fdca18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875551006
 GameObject:
   m_ObjectHideFlags: 3
@@ -7725,6 +7738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Start: {x: 0, y: 0, z: 0}
   End: {x: 0, y: 0, z: 0}
+  currentNutrients: {fileID: 0}
 --- !u!54 &1955227320
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class NutrientSpawner : MonoBehaviour
     public Vector3 minBounds = new Vector3(-11f, -28f);
     public Vector3 maxBounds = new Vector3(6f, -4f);
     public float z = 81f;
-    public float NutrientValueMin = 2;
+    public float NutrientValueMin = 1;
     public float NutrientValueMax = 4;
     private GameObject[] _existingNutrients = Array.Empty<GameObject>();
 
@@ -57,6 +57,9 @@ public class NutrientSpawner : MonoBehaviour
                 var newNutrientGameObject = Instantiate(nutrient, randomPosition, Quaternion.identity);
                 var newNutrient = newNutrientGameObject.GetComponent<Nutrient>();
                 newNutrient.Value = Random.Range(NutrientValueMin, NutrientValueMax);
+                
+                float scalingFactor = newNutrient.Value / (NutrientValueMax + NutrientValueMin);
+                newNutrientGameObject.transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
             }
             else i--;
         }
