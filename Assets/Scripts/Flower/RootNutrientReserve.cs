@@ -6,6 +6,12 @@ namespace Flower
     {
         public float NutrientsInReserve { get; private set; } = 10;
 
+        [ContextMenu("Add Nutrients")]
+        public void DebugAddNutrient()
+        {
+            AddNutrient(100);
+        }
+
         public void AddNutrient(float nutrientAmount)
         {
             NutrientsInReserve += nutrientAmount;

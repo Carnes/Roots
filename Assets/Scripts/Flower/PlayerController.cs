@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using Roots;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using Random = System.Random;
 using Random2 = UnityEngine.Random;
 
@@ -10,8 +12,9 @@ namespace Flower
     public class PlayerController : MonoBehaviour
     {
         public Root MainRoot;
-        public RootNutrientReserve NutrientReserve;
+        public GameObject NearestGrowPoint;
 
+        private RootNutrientReserve _nutrientReserve;
         private const int LEFT_MOUSE_BUTTON = 0;
         private const int RIGHT_MOUSE_BUTTON = 1;
         
@@ -20,12 +23,22 @@ namespace Flower
             if (MainRoot == null)
                 throw new Exception("MainRoot must be connected via Inspector");
 
-            NutrientReserve = RootNutrientReserve.Instance;
+            _nutrientReserve = RootNutrientReserve.Instance;
         }
 
         public void Update()
         {
-            
+            var mousePosition = GetMousePosition();
+            if (mousePosition != null)
+            {
+                var nearestPoint = GetNearestGrowPoint(mousePosition.Value);
+                NearestGrowPoint.SetActive(true);
+                NearestGrowPoint.transform.position = nearestPoint.GrowPosition;
+            }
+            else
+            {
+                NearestGrowPoint.SetActive(false);
+            }
             HandleInput();
         }
 
@@ -39,23 +52,48 @@ namespace Flower
             }            
         }
 
-        private void HandleMouseClick()
+        IGrowPoint GetNearestGrowPoint(Vector3 point) // FIXME - this could be cached and refresh after roots added/destroyed
+        {
+            var growPoints = MainRoot.GetGrowablePoints();
+            var nearestPoint = growPoints.First();
+            var minDist = float.MaxValue;
+            foreach (var growPoint in growPoints)
+            {
+                var dist = Vector3.Distance(point, growPoint.GrowPosition);
+                if (dist < minDist)
+                {
+                    nearestPoint = growPoint;
+                    minDist = dist;
+                }
+            }
+
+            return nearestPoint;
+        }
+
+        private Vector3? GetMousePosition()
         {
             var mouseRay = GameSettings.Instance.MainCamera.ScreenPointToRay(Input.mousePosition);
-
             if (Physics.Raycast(mouseRay, out _mouseClickHit, 1000f, GameSettings.Instance.SelectableColliderLayer, QueryTriggerInteraction.Collide))
+                return _mouseClickHit.point;
+            return null;
+        }
+
+        private void HandleMouseClick()
+        {
+            var mousePoint = GetMousePosition();
+            if (mousePoint != null)
             {
-                if (NutrientReserve.NutrientsInReserve >= 0)
+                if (_nutrientReserve.NutrientsInReserve >= 0)
                 {
-                    MainRoot.AddRootWorldPoint(_mouseClickHit.point);
-                    NutrientReserve.SubtractNutrient(Random2.Range(1,4));
+                    var growPoint = GetNearestGrowPoint(_mouseClickHit.point);
+                    growPoint.GrowToWorldPoint(_mouseClickHit.point);
+                    // MainRoot.AddRootWorldPoint(_mouseClickHit.point);
+                    _nutrientReserve.SubtractNutrient(Random2.Range(1, 4));
                 }
                 else
                 {
                     Debug.Log("Not enough nutrients to move the root!");
                 }
-                // Debug.Log($"Grow to point: {_mouseClickHit.point.ToString()}");
-                
             }
         }
     }
