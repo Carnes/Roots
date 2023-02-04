@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028468, g: 0.22571646, b: 0.30692235, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028489, g: 0.225717, b: 0.30692303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,8 +184,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1955227318}
-  - {fileID: 1438917382}
   - {fileID: 1619270015}
+  - {fileID: 1438917382}
   - {fileID: 1154609885}
   - {fileID: 796639140}
   m_Father: {fileID: 0}
@@ -556,21 +556,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: a4b7393b9f4f4704ab5782401944d224, type: 3}
-        m_TargetAssemblyTypeName: NutrientSpawner, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 491100885}
         m_TargetAssemblyTypeName: NutrientSpawner, Assembly-CSharp
-        m_MethodName: RandomlySpawnNutrients
+        m_MethodName: SpawnNutrientsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -696,7 +684,7 @@ MonoBehaviour:
   obstacle: {fileID: 108756, guid: 2d521608fcf07c346b5e2ed4049aa717, type: 3}
   obstacle2: {fileID: 160260, guid: 36cf43d46aeb7494b82aa54d61da3bd7, type: 3}
   obstacle3: {fileID: 199114, guid: ace40d2a4a1290f4f96f01a7e4ecd7f7, type: 3}
-  totalObstaclesToSpawn: 6
+  totalObstaclesToSpawn: 15
 --- !u!4 &544737779
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8edabf49b1cef4095948e4bfdda6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillSpeed: 4
+  fillSpeed: 5
   nutrientReserve: {fileID: 0}
   nutrients: 0
 --- !u!1 &711550771 stripped
@@ -1561,7 +1549,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143844665}
   serializedVersion: 8
-  lengthInSec: 2
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1805,7 +1793,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6748,7 +6736,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 187477800}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1619270016
 ParticleSystemRenderer:

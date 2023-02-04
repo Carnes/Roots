@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class NutrientReserveBar : MonoBehaviour
 {
     private Slider _nutrientReserveBar;
-    public float fillSpeed = 10f;
+    public float fillSpeed = 10;
     private ParticleSystem _particleSystem;
 
     public RootNutrientReserve nutrientReserve;
@@ -32,22 +32,18 @@ public class NutrientReserveBar : MonoBehaviour
     void Update()
     {
         nutrients = nutrientReserve.NutrientsInReserve;
-
-        if (_nutrientReserveBar.value < nutrients)
+        var bufferAmt = 0.05f;
+        if (_nutrientReserveBar.value + bufferAmt < nutrients)
         {
             _nutrientReserveBar.value += fillSpeed * Time.deltaTime;
-            if (!_particleSystem.isPlaying)
-            {
-                _particleSystem.Play();
-            }
+            _particleSystem.Play();
+            
         }
-        else if (_nutrientReserveBar.value > nutrients)
+        else if (_nutrientReserveBar.value > nutrients + bufferAmt )
         {
             _nutrientReserveBar.value -= fillSpeed * Time.deltaTime;
-            if (!_particleSystem.isPlaying)
-            {
-                _particleSystem.Play();
-            }
+            _particleSystem.Play();
+            
         }
         else
         {
