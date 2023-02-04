@@ -526,6 +526,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11500000, guid: a4b7393b9f4f4704ab5782401944d224, type: 3}
+        m_TargetAssemblyTypeName: NutrientSpawner, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 491100885}
         m_TargetAssemblyTypeName: NutrientSpawner, Assembly-CSharp
         m_MethodName: RandomlySpawnNutrients
@@ -656,7 +668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrient: {fileID: 4745588827692752442, guid: af1035910d9bc834bbd8f480fdcd0762, type: 3}
   totalNutrientsToSpawn: 15
-  spawner: {fileID: 0}
 --- !u!1 &544737777
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +697,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022bcaf076a8f9f4ab07f4d9f62405e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacle: {fileID: 108756, guid: 2d521608fcf07c346b5e2ed4049aa717, type: 3}
+  obstacle2: {fileID: 160260, guid: 36cf43d46aeb7494b82aa54d61da3bd7, type: 3}
+  obstacle3: {fileID: 199114, guid: ace40d2a4a1290f4f96f01a7e4ecd7f7, type: 3}
+  totalObstaclesToSpawn: 6
 --- !u!4 &544737779
 Transform:
   m_ObjectHideFlags: 0
@@ -1031,7 +1046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.7, y: 96.9}
+  m_AnchoredPosition: {x: -188, y: 80}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666273219
@@ -1073,13 +1088,13 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1331462112}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 50
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

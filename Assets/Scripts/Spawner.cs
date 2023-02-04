@@ -35,8 +35,6 @@ public class Spawner : MonoBehaviour
     
     public void RandomlySpawnObjects(GameObject objectToSpawn, int numObjectsToSpawn, string objectTypeToSpawn)
     {
-        DestroyObjectsIfExists();
-
         List<Vector3> spawnPoints = new List<Vector3>();
         for (int i = 0; i < numObjectsToSpawn; i++)
         {
@@ -57,6 +55,12 @@ public class Spawner : MonoBehaviour
 
                     float scalingFactor = newNutrient.Value / 2;
                     gameObjectToSpawn.transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
+                }
+
+                if (objectTypeToSpawn == "Obstacle")
+                {
+                    gameObjectToSpawn.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
+                    gameObjectToSpawn.transform.localScale = new Vector3(Random.Range(1f, 2f), Random.Range(1f, 2f), 1);
                 }
             }
             else i--;
