@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using Helpers;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,20 +12,24 @@ namespace Flower
     [RequireComponent(typeof(LineRenderer))]
     public class Root : MonoBehaviour
     {
-        public float RootWidthMin = 0.5f;
-        public float RootWidthMax = 1.5f;
-        public float RootWidthPerSegment = 0.25f;
-        public List<Vector3> StartingStaticPoints;
-        public List<Vector3> AllPoints => StartingStaticPoints.Union(RootParts.Select(rp=>rp.End).ToList()).ToList();
-        
-        public List<RootPart> RootParts;
+        [InspectorLabel("Prefabs")]
         public GameObject RootPartGameObject;
         public GameObject RootDeathGameObject;
 
-        public Root ParentRoot;
-        public List<Root> ChildrenRoots;
+        [InspectorLabel("Settings")]
+        public float RootWidthMin = 0.5f;
+        public float RootWidthMax = 1.5f;
+        public float RootWidthPerSegment = 0.25f;
         
+        [InspectorLabel("Starting points")]
+        public List<Vector3> StartingStaticPoints = new List<Vector3>();
+
+        private List<RootPart> RootParts = new List<RootPart>();
+        private Root ParentRoot;
+        private List<Root> ChildrenRoots = new List<Root>();
         private LineRenderer _lineRenderer;
+
+        private List<Vector3> AllPoints => StartingStaticPoints.Union(RootParts.Select(rp=>rp.End).ToList()).ToList();
 
         public void OnEnable()
         {
@@ -36,16 +41,7 @@ namespace Flower
         {
             SetRootPoints();
         }
-
-        public void SetRootPoints()
-        {
-            var allPoints = AllPoints;
-            var offSet = transform.position;
-            _lineRenderer.positionCount = allPoints.Count;
-            _lineRenderer.SetPositions(allPoints.ToArray());
-            SetRootWidth();
-        }
-
+        
         public void RootPartHit(RootPart rootPartThatWasHit)
         {
             var isDestroying = false;
@@ -63,14 +59,12 @@ namespace Flower
             }
             SetRootPoints();
         }
-
-        private void DestroyRootPart(RootPart rootPart)
+   
+        public void AddRootWorldPoint(Vector3 worldPoint)
         {
-            RootParts.Remove(rootPart);
-            var rootDeath = Instantiate(RootDeathGameObject, rootPart.gameObject.transform.position, Quaternion.identity);
-            rootDeath.SetActive(true);
-            Destroy(rootPart.gameObject, 0.01f); // FIXME - magic number
-        }
+            var localPoint = transform.InverseTransformPoint(worldPoint);
+                AddRootPoint(localPoint);
+        }    
 
         // public int GetCountOfRootPartsFromFlower(int currentCount = 0)
         // {
@@ -80,7 +74,7 @@ namespace Flower
         //     return ParentRoot.GetCountOfRootPartsFromFlower(currentCount);
         // }
 
-        public int GetCountOfRootPartsFromChildren()
+        private int GetCountOfRootPartsFromChildren()
         {
             var currentCount = AllPoints.Count;
             foreach (var child in ChildrenRoots)
@@ -90,9 +84,9 @@ namespace Flower
 
             return currentCount;
         }
-        
+ 
 
-        public void SetRootWidth()
+        private void SetRootWidth()
         {
             var childParts = GetCountOfRootPartsFromChildren();
             var rootWidth = RootWidthPerSegment * (childParts);
@@ -103,21 +97,11 @@ namespace Flower
             _lineRenderer.startWidth = rootWidth;
         }
 
-        public void AddRootWorldPoint(Vector3 worldPoint)
-        {
-            var localPoint = transform.InverseTransformPoint(worldPoint);
-                AddRootPoint(localPoint);
-        }
 
-        public void AddRootPoint(Vector3 point)
+        private void AddRootPoint(Vector3 point)
         {
             var lastPoint = AllPoints.LastOrDefault();
-
-            var rootPartGameObject = Instantiate(RootPartGameObject, transform);
-            var rootPart = rootPartGameObject.GetComponent<RootPart>();
-            rootPart.Set(lastPoint, point);
-            rootPartGameObject.SetActive(true);
-            
+            var rootPart = CreateRootPart(lastPoint, point);
             RootParts.Add(rootPart);
 
             var allPoints = AllPoints;
@@ -126,13 +110,31 @@ namespace Flower
             
             SetRootPoints();
         }
-
-        [ContextMenu("Grow Down")]
-        public void GrowDown()
+        
+        private void SetRootPoints()
         {
-            var down = Vector3.down * 0.50f; // FIXME - magic number
-            var endPoint = AllPoints.LastOrDefault();
-            AddRootPoint(endPoint + down);
+            var allPoints = AllPoints;
+            var offSet = transform.position;
+            _lineRenderer.positionCount = allPoints.Count;
+            _lineRenderer.SetPositions(allPoints.ToArray());
+            SetRootWidth();
+        }
+
+        private RootPart CreateRootPart(Vector3 start, Vector3 end)
+        {
+            var rootPartGameObject = Instantiate(RootPartGameObject, transform);
+            var rootPart = rootPartGameObject.GetComponent<RootPart>();
+            rootPart.Set(start, end);
+            rootPartGameObject.SetActive(true);
+            return rootPart;
+        }
+        
+        private void DestroyRootPart(RootPart rootPart)
+        {
+            RootParts.Remove(rootPart);
+            var rootDeath = Instantiate(RootDeathGameObject, rootPart.gameObject.transform.position, Quaternion.identity);
+            rootDeath.SetActive(true);
+            Destroy(rootPart.gameObject, 0.01f); // FIXME - magic number
         }
     }
 }
