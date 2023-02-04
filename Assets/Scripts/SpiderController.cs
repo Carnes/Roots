@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Flower;
 using Roots;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class SpiderController : MonoBehaviour
+public class SpiderController : MonoBehaviour, IRootCollision
 {
     public GameObject spider;
     public float speed = .50f;
@@ -69,4 +70,11 @@ public class SpiderController : MonoBehaviour
         //spider.transform.position += new Vector3(speed*Time.deltaTime, 0, 0);
     }
 
+    public bool HandleRootPartCollision(RootPart rootPart, Collider collidingPart)
+    {
+        // FIXME - handle spider logic when it hits a root part
+        
+        Debug.Log($"Spider strike!");
+        return true; // true means destroy root part
+    }
 }

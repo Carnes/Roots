@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Flower
@@ -9,44 +10,42 @@ namespace Flower
     {
         public Vector3 Start;
         public Vector3 End;
-        public RootNutrientReserve currentNutrients;
-        
+
         public void Set(Vector3 start, Vector3 end)
         {
             Start = start;
             End = end;
-            var direction = (end - start).normalized;
-            var dist = Vector3.Distance(start, end);
-            var middlePoint = ((dist / 2) * direction) + start;
+            SetTransform();
+            SetCollider();
+        }
+
+        private void SetTransform()
+        {
+            var direction = (End - Start).normalized;
+            var dist = Vector3.Distance(Start, End);
+            var middlePoint = ((dist / 2) * direction) + Start;
 
             transform.position = Vector3.zero;
             transform.localPosition = middlePoint;
             transform.forward = direction;
+        }
 
+        private void SetCollider()
+        {
+            var dist = Vector3.Distance(Start, End);
             var collider = GetComponent<CapsuleCollider>();
             collider.height = dist;
             collider.isTrigger = true;
-            
-            currentNutrients = RootNutrientReserve.Instance;
         }
 
         protected void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Nutrient"))
+            var collisionHandler = other.gameObject.GetComponent<IRootCollision>();
+            if (collisionHandler != null)
             {
-                var nutrient = other.gameObject.GetComponent<Nutrient>();
-                currentNutrients.AddNutrient(nutrient.Value);
-                Debug.Log($"Found Nutrient! value: {nutrient.Value}. Nutrient Reserve is {currentNutrients.NutrientsInReserve}");
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.CompareTag("Spider"))
-            {
-                Debug.Log($"Spider strike!");
-                transform.parent.GetComponent<Root>().RootPartHit(this);
-            }
-            else
-            {
-                Debug.Log($"Collision: {other.gameObject.name} hit {gameObject.name}");
+                var shouldDestroyRoots = collisionHandler.HandleRootPartCollision(this, other);
+                if (shouldDestroyRoots)
+                    transform.parent.GetComponent<Root>().RootPartHit(this);
             }
         }
     }
