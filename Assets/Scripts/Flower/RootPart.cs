@@ -36,7 +36,7 @@ namespace Flower
             {
                 var nutrient = other.gameObject.GetComponent<Nutrient>();
                 currentNutrients.AddNutrient(nutrient.Value);
-                Debug.Log($"Found Nutrient! value: {nutrient.Value}. Nutrient Reserve is {currentNutrients.NutrientReserve}");
+                Debug.Log($"Found Nutrient! value: {nutrient.Value}. Nutrient Reserve is {currentNutrients.NutrientsInReserve}");
                 Destroy(other.gameObject);
             }
             else if (other.gameObject.CompareTag("Spider"))

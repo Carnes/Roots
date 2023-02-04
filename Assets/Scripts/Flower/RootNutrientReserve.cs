@@ -24,16 +24,16 @@ namespace Flower
                 return _instance;
             }
         }
-        public float NutrientReserve { get; private set; } = 0;
+        public float NutrientsInReserve { get; private set; } = 10;
 
         public void AddNutrient(float nutrientAmount)
         {
-            NutrientReserve += nutrientAmount;
+            NutrientsInReserve += nutrientAmount;
         }
 
         public void SubtractNutrient(float nutrientAmount)
         {
-            NutrientReserve -= nutrientAmount;
+            NutrientsInReserve -= nutrientAmount;
         }
 
     }
