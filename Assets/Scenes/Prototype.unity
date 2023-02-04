@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028468, g: 0.22571646, b: 0.30692235, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028466, g: 0.22571646, b: 0.30692235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -882,7 +882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8182715134330281122, guid: 8e975621ce40302459691c7ff1956456, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.21
+      value: -3.05
       objectReference: {fileID: 0}
     - target: {fileID: 8182715134330281122, guid: 8e975621ce40302459691c7ff1956456, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8209,6 +8209,30 @@ PrefabInstance:
     - target: {fileID: 6275634636284628187, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
+      propertyPath: BoundaryMax.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
+      propertyPath: BoundaryMax.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
+      propertyPath: BoundaryMax.z
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
+      propertyPath: BoundaryMin.x
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
+      propertyPath: BoundaryMin.y
+      value: -28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
+      propertyPath: BoundaryMin.z
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 6275634636284628188, guid: 69b76588b3d38e340a8cdef72cbfa532, type: 3}
       propertyPath: SelectableColliderLayer.m_Bits
