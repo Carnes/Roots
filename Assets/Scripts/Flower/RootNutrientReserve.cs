@@ -15,6 +15,7 @@ namespace Flower
         public override void SingletonStart()
         {
             Alive();
+            victoryScreen.SetActive(false);
         }
 
         [ContextMenu("Add Nutrients")]

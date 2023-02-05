@@ -51,9 +51,9 @@ public class Spawner : MonoBehaviour
                 if (objectTypeToSpawn == "Nutrient")
                 {
                     var newNutrient = gameObjectToSpawn.GetComponent<Nutrient>();
-                    newNutrient.Value = Random.Range(1f,6f);
+                    newNutrient.Value = Random.Range(2f,4f);
 
-                    float scalingFactor = newNutrient.Value / 3;
+                    float scalingFactor = newNutrient.Value / 2;
                     gameObjectToSpawn.transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
                 }
 
