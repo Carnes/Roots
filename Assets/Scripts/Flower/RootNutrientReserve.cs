@@ -9,6 +9,11 @@ namespace Flower
         public float NutrientsInReserve = 10;
         public float DistanceCostMultiplier = 0.5f;
 
+        public override void SingletonStart()
+        {
+            Alive();
+        }
+
         [ContextMenu("Add Nutrients")]
         public void DebugAddNutrient()
         {
@@ -18,6 +23,8 @@ namespace Flower
         public void AddNutrient(float nutrientAmount)
         {
             NutrientsInReserve += nutrientAmount;
+            if (NutrientsInReserve > 0f)
+                Alive();
         }
 
         public void SubtractNutrient(float nutrientAmount)
@@ -32,6 +39,11 @@ namespace Flower
         private void Death()
         {
             deathScreen.SetActive(true);
+        }
+        
+        private void Alive()
+        {
+            deathScreen.SetActive(false);
         }
         
         public void SubtractNutrientByDistance(float nutrientAmount)
