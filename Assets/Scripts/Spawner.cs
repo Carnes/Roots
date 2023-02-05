@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DefaultNamespace;
+using Roots;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -66,7 +67,20 @@ public class Spawner : MonoBehaviour
             }
             else i--;
         }
+        ClearObstaclesAroundPlayer();
         _existingObjects = GameObject.FindGameObjectsWithTag(objectTypeToSpawn);
     }
+    
+    private void ClearObstaclesAroundPlayer()
+    {
+        var centerPoint = GameSettings.Instance.Player.transform.position;
+        var objectsNearPlayer = Physics.OverlapSphere(centerPoint, 5f);
+        foreach (var obj in objectsNearPlayer)
+        {
+            var obstacle = obj.GetComponent<Obstacle>();
+            if(obstacle != null)
+                Destroy(obstacle.gameObject);
+        }
+    }    
     
 }
