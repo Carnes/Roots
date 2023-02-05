@@ -17,7 +17,7 @@ public class PlaySoundEffect : Singleton<PlaySoundEffect>
 
     public void PlayRootHitsRockSound()
     {
-        soundEffects.PlayOneShot(rootHitsRockAudioSound, volume);
+        soundEffects.PlayOneShot(rootHitsRockAudioSound, volume + .1f);
     }
 
     public void PlaySpiderBreaksRootSound()
