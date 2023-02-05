@@ -2476,6 +2476,7 @@ GameObject:
   - component: {fileID: 1363558949}
   - component: {fileID: 1363558948}
   - component: {fileID: 1363558947}
+  - component: {fileID: 1363558951}
   m_Layer: 0
   m_Name: Title UI
   m_TagString: Untagged
@@ -2566,6 +2567,24 @@ RectTransform:
   m_AnchoredPosition: {x: 8.70048, y: 4.117404}
   m_SizeDelta: {x: 1600.9999, y: 774.99994}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1363558951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363558946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabeec7060b04b13981d30e4aa027703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartCam: {fileID: 540864196}
+  FlowerCam: {fileID: 1807997654}
+  DirtCam: {fileID: 1092539252}
+  UndergroundCam: {fileID: 1668774585}
+  DelayFromFlowerToDirt: 2.5
+  DelayFromDirtToUnderground: 2
 --- !u!1001 &1373294216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2989,12 +3008,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd9aea3559a4129b5b17fea6f39d7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartCam: {fileID: 540864196}
-  FlowerCam: {fileID: 1807997654}
-  DirtCam: {fileID: 1092539252}
-  UndergroundCam: {fileID: 1668774585}
-  DelayFromFlowerToDirt: 3
-  DelayFromDirtToUnderground: 2
 --- !u!4 &1589027055
 Transform:
   m_ObjectHideFlags: 0
@@ -3913,7 +3926,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1589027054}
+      - m_Target: {fileID: 1363558951}
         m_TargetAssemblyTypeName: DefaultNamespace.TitleScreen, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1

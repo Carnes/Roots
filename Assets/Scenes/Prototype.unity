@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028468, g: 0.22571646, b: 0.30692235, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028489, g: 0.225717, b: 0.30692303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 75.39931
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -367,7 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6021042011b7144bb85b7a1dd1d6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSpeed: 2
+  panSpeed: 16
+  zoomSpeed: 30
 --- !u!1 &187477799
 GameObject:
   m_ObjectHideFlags: 0
@@ -6184,7 +6185,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 75.39931
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -17452,7 +17453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1462539856
 MonoBehaviour:
   m_ObjectHideFlags: 0

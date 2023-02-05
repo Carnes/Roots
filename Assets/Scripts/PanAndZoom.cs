@@ -47,6 +47,7 @@ public class PanAndZoom : MonoBehaviour
 
     private void ZoomScreen(float increment)
     {
+        return;
         float fov = _virtualCamera.m_Lens.FieldOfView;
         float target = Mathf.Clamp(fov + increment, _zoomInMax, _zoomOutMax);
 
