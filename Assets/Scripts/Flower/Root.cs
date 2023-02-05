@@ -28,7 +28,7 @@ namespace Flower
 
         public Vector3 GrowPosition => AllPoints.Last() + transform.position  + new Vector3(0,0,-0.25f); // very end of root
 
-        private List<Vector3> AllPoints => StartingStaticPoints.Union(RootParts.Select(rp=>rp.End).ToList()).ToList();
+        private List<Vector3> AllPoints => StartingStaticPoints.Union(RootParts.Select(rp=>rp.CurrentEnd).ToList()).ToList();
 
         public void OnEnable()
         {
@@ -72,13 +72,17 @@ namespace Flower
         public List<IGrowPoint> GetGrowablePoints()
         {
             var points = new List<IGrowPoint>();
-            points.Add(this);
+            var lastPart = RootParts.LastOrDefault();
+            
+            if(lastPart == null || lastPart.IsGrowing == false)
+                points.Add(this);
+            
             foreach (var rootPart in RootParts)
             {
-                if(rootPart.HasRoomForGrowth)
+                if(rootPart.HasRoomForGrowth && rootPart.IsGrowing == false)
                     points.Add(rootPart);
             }
-
+            
             foreach (var child in ChildrenRoots)
             {
                 points.AddRange(child.GetGrowablePoints());
@@ -151,7 +155,12 @@ namespace Flower
             RefreshLineRenderer();
             return true;
         }
-        
+
+        private void Update()
+        {
+            RefreshLineRenderer();
+        }
+
         private void RefreshLineRenderer()
         {
             var allPoints = AllPoints;
@@ -164,7 +173,7 @@ namespace Flower
         {
             var rootPartGameObject = Instantiate(GameSettings.Instance.RootPartPrefab, transform);
             var rootPart = rootPartGameObject.GetComponent<RootPart>();
-            rootPart.Set(start, end, true);
+            rootPart.Set(start, end);
             rootPartGameObject.SetActive(true);
             return rootPart;
         }

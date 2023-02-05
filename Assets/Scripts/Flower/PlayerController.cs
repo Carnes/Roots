@@ -32,8 +32,15 @@ namespace Flower
             if (mousePosition != null)
             {
                 var nearestPoint = GetNearestGrowPoint(mousePosition.Value);
-                NearestGrowPoint.SetActive(true);
-                NearestGrowPoint.transform.position = nearestPoint.GrowPosition;
+                if (nearestPoint != null)
+                {
+                    NearestGrowPoint.SetActive(true);
+                    NearestGrowPoint.transform.position = nearestPoint.GrowPosition;
+                }
+                else
+                {
+                    NearestGrowPoint.SetActive(false);
+                }
             }
             else
             {
@@ -55,6 +62,8 @@ namespace Flower
         IGrowPoint GetNearestGrowPoint(Vector3 point) // FIXME - this could be cached and refresh after roots added/destroyed
         {
             var growPoints = MainRoot.GetGrowablePoints();
+            if (growPoints.Any() == false)
+                return null;
             var nearestPoint = growPoints.First();
             var minDist = float.MaxValue;
             foreach (var growPoint in growPoints)
@@ -86,7 +95,8 @@ namespace Flower
                 if (_nutrientReserve.NutrientsInReserve >= 0)
                 {
                     var growPoint = GetNearestGrowPoint(_mouseClickHit.point);
-                    growPoint.GrowToWorldPoint(_mouseClickHit.point);
+                    if(growPoint != null)
+                        growPoint.GrowToWorldPoint(_mouseClickHit.point);
                 }
                 else
                 {
