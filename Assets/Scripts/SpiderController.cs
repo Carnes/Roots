@@ -105,6 +105,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
         if (transform.position.x < GameSettings.Instance.BoundaryMax.x)
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+            transform.rotation = Quaternion.Euler(0,90,-90);
         }
         else
         {
@@ -117,6 +118,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
         if (transform.position.x > GameSettings.Instance.BoundaryMin.x)
         {
             transform.position += new Vector3((-1 * speed) * Time.deltaTime, 0, 0);
+            transform.rotation = Quaternion.Euler(180,90,-90);
         }
         else
         {
@@ -129,6 +131,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
     void WalkSpiderDown()
     {
         transform.position += new Vector3(0, (-1 * speed) * Time.deltaTime, 0);
+        transform.rotation = Quaternion.Euler(90,90,-90);
 
         ActionCountDown -= Time.deltaTime;
 
@@ -140,11 +143,12 @@ public class SpiderController : MonoBehaviour, IRootCollision
                 moveSpiderUp = false;
                 moveSpiderLeft = true;
                 moveSpiderRight = false;
-                transform.Rotate(0, 90, 0);
+                //transform.rotation = Quaternion.Euler(0,270,0);
+                //transform.Rotate(0, 270, 0);
             }
             else
             {
-                transform.Rotate(0, -90, 0);
+                //transform.Rotate(0, -90, 0);
                 moveSpiderDown = false;
                 moveSpiderUp = false;
                 moveSpiderLeft = false;
@@ -156,6 +160,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
     void WalkSpiderUp()
     {
         transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        transform.rotation = Quaternion.Euler(270,90,-90);
         ActionCountDown -= Time.deltaTime;
         if (ActionCountDown <= 0)
         {
@@ -183,7 +188,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
        //y max is top
        if (transform.position.y > GameSettings.Instance.BoundaryMin.y)
        {
-           transform.Rotate(0, 90, 0);
+           //transform.Rotate(0, 90, 0);
            moveSpiderDown = true;
            moveSpiderUp = false;
            moveSpiderLeft = false;
@@ -193,7 +198,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
        }
        else if (transform.position.y < GameSettings.Instance.BoundaryMax.y)
        {
-           transform.Rotate(0, -90, 0);
+           //transform.Rotate(0, -90, 0);
            moveSpiderUp = true;
            moveSpiderDown = false;
            moveSpiderLeft = false;
@@ -228,7 +233,21 @@ public class SpiderController : MonoBehaviour, IRootCollision
     public bool HandleRootPartCollision(RootPart rootPart, Collider collidingPart)
     {
         // FIXME - handle spider logic when it hits a root part
-        
+        if (moveSpiderRight)
+        {
+            moveSpiderUp = false;
+            moveSpiderDown = false;
+            moveSpiderLeft = true;
+            moveSpiderRight = false;
+        }
+        else
+        {
+            moveSpiderUp = false;
+            moveSpiderDown = false;
+            moveSpiderLeft = false;
+            moveSpiderRight = true;
+        }
+
         Debug.Log($"Spider strike!");
         return true; // true means destroy root part
     }
