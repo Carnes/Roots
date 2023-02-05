@@ -2,6 +2,7 @@
 using System.Collections;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DefaultNamespace
 {
@@ -33,10 +34,11 @@ namespace DefaultNamespace
             yield return new WaitForSeconds(DelayFromFlowerToDirt);
             MoveCamera(FlowerCam, DirtCam);
             yield return new WaitForSeconds(DelayFromDirtToUnderground);
-            MoveCamera(DirtCam, UndergroundCam);
-            
-            yield return new WaitForSeconds(3);
-            Application.Quit();
+            SceneManager.LoadScene("Prototype");
+            //MoveCamera(DirtCam, UndergroundCam);
+
+            //yield return new WaitForSeconds(3);
+            //Application.Quit();
         }
 
         private void MoveCamera(CinemachineVirtualCamera currentCam, CinemachineVirtualCamera newCam)
