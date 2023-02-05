@@ -18,6 +18,9 @@ namespace DefaultNamespace
 
         public void Start()
         {
+            Application.targetFrameRate = 300;
+            QualitySettings.vSyncCount = 0;  
+            
             FlowerCam.Priority = 0;
             DirtCam.Priority = 0;
             StartCam.Priority = 1000;
