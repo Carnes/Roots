@@ -231,6 +231,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
         }
 
         Debug.Log($"Spider strike!");
+        PlaySoundEffect.Instance.PlaySpiderBreaksRootSound();
         return true; // true means destroy root part
     }
 }

@@ -11,6 +11,7 @@ namespace DefaultNamespace
             var currentNutrients = RootNutrientReserve.Instance;
             currentNutrients.AddNutrient(Value);
             Debug.Log($"Found Nutrient! value: {Value}. Nutrient Reserve is {currentNutrients.NutrientsInReserve}");
+            PlaySoundEffect.Instance.PlayNutrientPickUpSound();
             Destroy(gameObject, 0.01f);
             return false; // false means do not destroy root part
         }

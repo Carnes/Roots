@@ -48,11 +48,13 @@ namespace Flower
 
         private void Victory()
         {
+            PlaySoundEffect.Instance.PlayVictorySound();
             victoryScreen.SetActive(true);
         }
 
         private void Death()
         {
+            PlaySoundEffect.Instance.PlayDefeatSound();
             deathScreen.SetActive(true);
         }
         

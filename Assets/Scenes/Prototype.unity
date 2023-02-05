@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028468, g: 0.22571646, b: 0.30692235, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028489, g: 0.225717, b: 0.30692303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6674,7 +6674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d1e1e2331b9cf43828cece170a74a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seAudioSource: {fileID: 1463307860}
+  soundEffects: {fileID: 1463307860}
   rootHitsRockAudioSound: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
   spiderBreaksRootSound: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
   nutrientPickUpSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
