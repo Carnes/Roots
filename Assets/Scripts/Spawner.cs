@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
     }
     private bool IsTooClose(List<Vector3> objectSpawnPoints, Vector3 randomPosition)
     {
-        float distanceThreshold = 8f;
+        float distanceThreshold = 2f;
         foreach (Vector3 spawnPoint in objectSpawnPoints)
         {
             float distance = Vector3.Distance(randomPosition, spawnPoint);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028466, g: 0.22571646, b: 0.30692235, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028489, g: 0.225717, b: 0.30692303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5378,7 +5378,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 491100885}
         m_TargetAssemblyTypeName: NutrientSpawner, Assembly-CSharp
-        m_MethodName: RandomlySpawnNutrients
+        m_MethodName: SpawnNutrientsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6092,7 +6092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8182715134330281133, guid: 8e975621ce40302459691c7ff1956456, type: 3}
       propertyPath: speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8504029141233832165, guid: 8e975621ce40302459691c7ff1956456, type: 3}
       propertyPath: m_LocalScale.x

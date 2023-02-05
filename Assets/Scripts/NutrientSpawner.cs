@@ -3,7 +3,7 @@ using UnityEngine;
 public class NutrientSpawner : MonoBehaviour
 {
     public GameObject nutrient;
-    public int totalNutrientsToSpawn = 15;
+    public int totalNutrientsToSpawn;
     private Spawner _spawner;
 
     public void SpawnNutrientsButton()
