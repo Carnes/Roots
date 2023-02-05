@@ -21,6 +21,11 @@ public class NutrientReserveBar : MonoBehaviour
         _particleSystem = GameObject.Find("NutrientBarParticles").GetComponent<ParticleSystem>();
     }
 
+    public void OnEnable()
+    {
+        nutrientReserve = RootNutrientReserve.Instance;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

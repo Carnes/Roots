@@ -34,7 +34,7 @@ namespace Roots
 
         public void RestartGame()
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Prototype");
         }
         
         public void QuitGame()

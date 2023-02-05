@@ -11,6 +11,7 @@ namespace Helpers
 
         public void Awake()
         {
+            m_ShuttingDown = false;
             if (hasWoke == false)
                 SingletonAwake();
             hasWoke = true;
