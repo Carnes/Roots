@@ -12,6 +12,10 @@ namespace Roots
         public Vector3 PositionOfGameBoard = Vector3.zero;
         public LayerMask SelectableColliderLayer;
         public Camera MainCamera;
+        [Header("Prefabs")]
+        public GameObject RootPartPrefab;
+        public GameObject RootDeathPrefab;
+        public GameObject RootPrefab;        
 
         public override void SingletonAwake()
         {            

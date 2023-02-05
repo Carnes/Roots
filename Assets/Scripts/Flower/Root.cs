@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using Helpers;
+using Roots;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,11 +13,6 @@ namespace Flower
     [RequireComponent(typeof(LineRenderer))]
     public class Root : MonoBehaviour, IGrowPoint
     {
-        [FormerlySerializedAs("RootPartGameObject")] [Header("Prefabs")]
-        public GameObject RootPartPrefab;
-        public GameObject RootDeathPrefab;
-        public GameObject RootPrefab;
-
         [Header("Settings")]
         public float RootWidthMin = 0.5f;
         public float RootWidthMax = 1.5f;
@@ -100,12 +96,12 @@ namespace Flower
 
         public Root AddChildRoot(Vector3 start, Vector3 end)
         {
-            var rootGameObject = Instantiate(RootPrefab, transform);
+            var rootGameObject = Instantiate(GameSettings.Instance.RootPrefab, transform);
             var root = rootGameObject.GetComponent<Root>();
             ChildrenRoots.Add(root);
-            // root.StartingStaticPoints = new List<Vector3> { new Vector3(0,0,0) };
             var localStart = transform.InverseTransformPoint(start);
             rootGameObject.transform.localPosition = localStart;
+            rootGameObject.SetActive(true);
             var isSuccess = root.GrowToWorldPoint(end);
             if (!isSuccess)
             {
@@ -115,14 +111,6 @@ namespace Flower
 
             return root;
         }
-
-        // public int GetCountOfRootPartsFromFlower(int currentCount = 0)
-        // {
-        //     currentCount++;
-        //     if (ParentRoot == null)
-        //         return currentCount;
-        //     return ParentRoot.GetCountOfRootPartsFromFlower(currentCount);
-        // }
 
         private int GetCountOfRootPartsFromChildren()
         {
@@ -174,7 +162,7 @@ namespace Flower
 
         private RootPart CreateRootPart(Vector3 start, Vector3 end)
         {
-            var rootPartGameObject = Instantiate(RootPartPrefab, transform);
+            var rootPartGameObject = Instantiate(GameSettings.Instance.RootPartPrefab, transform);
             var rootPart = rootPartGameObject.GetComponent<RootPart>();
             rootPart.Set(start, end, true);
             rootPartGameObject.SetActive(true);
@@ -190,7 +178,7 @@ namespace Flower
             }
 
             RootParts.Remove(rootPart);
-            var rootDeath = Instantiate(RootDeathPrefab, rootPart.gameObject.transform.position, Quaternion.identity);
+            var rootDeath = Instantiate(GameSettings.Instance.RootDeathPrefab, rootPart.gameObject.transform.position, Quaternion.identity);
             rootDeath.SetActive(true);
             Destroy(rootPart.gameObject, 0.01f); // FIXME - magic number
         }
