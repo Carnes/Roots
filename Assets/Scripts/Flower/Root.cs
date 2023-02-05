@@ -26,6 +26,7 @@ namespace Flower
         private List<Root> ChildrenRoots = new List<Root>();
         private LineRenderer _lineRenderer;
 
+
         public Vector3 GrowPosition => AllPoints.Last() + transform.position  + new Vector3(0,0,-0.25f); // very end of root
 
         private List<Vector3> AllPoints => StartingStaticPoints.Union(RootParts.Select(rp=>rp.CurrentEnd).ToList()).ToList();
