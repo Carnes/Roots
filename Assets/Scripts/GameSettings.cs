@@ -2,6 +2,7 @@
 using Flower;
 using Helpers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Roots
 {
@@ -29,6 +30,11 @@ namespace Roots
                 PositionOfGameBoard = transform.position;
             if(MainCamera == null)
                 MainCamera = Camera.main;
+        }
+
+        public void RestartGame()
+        {
+            SceneManager.LoadScene("Game");
         }
         
         public void QuitGame()
