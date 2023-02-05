@@ -16,7 +16,7 @@ public class SpiderController : MonoBehaviour, IRootCollision
     private Vector3 offset;
     private Animator _animator;
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
-    private float startx;
+    // private float startx;
     private float endx;
     private string direction;
     private bool rotateSpiderOnce = true;
@@ -33,8 +33,9 @@ public class SpiderController : MonoBehaviour, IRootCollision
     // Start is called before the first frame update
     void Start()
     {
-        startx = GameSettings.Instance.BoundaryMin.x;
-        transform.position = new Vector3(startx, transform.position.y, transform.position.z);
+        var startx = GameSettings.Instance.BoundaryMin.x;
+        var starty = Random.Range(GameSettings.Instance.BoundaryMin.y, GameSettings.Instance.BoundaryMax.y);
+        transform.position = new Vector3(startx, starty, GameSettings.Instance.BoundaryMax.z);
         MoveSpider();
 
       // endx     = GameSettings.Instance.BoundaryMax.x;

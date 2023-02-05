@@ -103,15 +103,18 @@ namespace Flower
         {
             var rootGameObject = Instantiate(GameSettings.Instance.RootPrefab, transform);
             var root = rootGameObject.GetComponent<Root>();
-            ChildrenRoots.Add(root);
             var localStart = transform.InverseTransformPoint(start);
             rootGameObject.transform.localPosition = localStart;
             rootGameObject.SetActive(true);
             var isSuccess = root.GrowToWorldPoint(end);
             if (!isSuccess)
             {
-                Destroy(rootGameObject);
+                Destroy(rootGameObject, 0.01f);
                 return null;
+            }
+            else
+            {
+                ChildrenRoots.Add(root);
             }
 
             return root;
