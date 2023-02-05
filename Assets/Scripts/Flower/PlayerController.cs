@@ -87,8 +87,6 @@ namespace Flower
                 {
                     var growPoint = GetNearestGrowPoint(_mouseClickHit.point);
                     growPoint.GrowToWorldPoint(_mouseClickHit.point);
-                    // MainRoot.AddRootWorldPoint(_mouseClickHit.point);
-                    _nutrientReserve.SubtractNutrient(Random2.Range(1, 4));
                 }
                 else
                 {
