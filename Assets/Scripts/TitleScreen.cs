@@ -30,7 +30,12 @@ namespace DefaultNamespace
         {
             StartCoroutine(PlayIntroAnimation());
         }
-        
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
+
         private IEnumerator PlayIntroAnimation()
         {
             MoveCamera(StartCam, FlowerCam);
