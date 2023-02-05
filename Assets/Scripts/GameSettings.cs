@@ -30,6 +30,11 @@ namespace Roots
             if(MainCamera == null)
                 MainCamera = Camera.main;
         }
+        
+        public void QuitGame()
+        {
+            Application.Quit();
+        }          
 
         public void OnDrawGizmosSelected()
         {

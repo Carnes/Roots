@@ -30,7 +30,7 @@ namespace DefaultNamespace
         {
             StartCoroutine(PlayIntroAnimation());
         }
-
+        
         private IEnumerator PlayIntroAnimation()
         {
             MoveCamera(StartCam, FlowerCam);
