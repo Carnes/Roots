@@ -6,7 +6,7 @@ GGJ project page: https://globalgamejam.org/2023/games/taproot-1
 GH Project board: https://github.com/users/Carnes/projects/3/views/1
 
 Team:
-- Sky Ortiz
+- Sky (Teresa) Ortiz
 - Kristina Carnes
 - Sean Carnes
 
